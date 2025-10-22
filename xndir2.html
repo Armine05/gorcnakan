@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <div    id="xumb">
+    <p onclick="changeColor(this)" ondblclick="jnjel(this)">paragraph 1 </p>
+    <p onclick="changeColor(this)">paragraph 2</p>
+    <p onclick="changeColor(this)">paragraph 3</p>
+    </div> 
+<script>
+    function changeColor(l){
+    //    document.getElementById("xumb").style.color = "#ff0000";
+        l.style.color = "#ff0000";
+        
+    }
+    function jnjel(l){
+       l.remove();
+    }
+</script>
+</body>
+
+</html>
