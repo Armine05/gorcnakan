@@ -45,8 +45,18 @@ $conn = new mysqli($servername, $username, $password, "ikm3shop");
 
 $sqlUser = "CREATE TABLE IF NOT EXISTS user(
     firstName VARCHAR(50),
-    lastName VARCHAR(50)
-    Email VARCHAR()
+    lastName VARCHAR(50),
+    Email VARCHAR(50),
+    Passwords VARCHAR(50),
+    ConfirmPassword VARCHAR(50),
+    username VARCHAR(50),
+    PhoneNumber VARCHAR(50),
+    DateOfBirth VARCHAR(50),
+    Gender  VARCHAR(50),
+    AddressOfUser VARCHAR(50),
+
+
+
 )";
 
 if ($conn->query($sqlUser) === TRUE) {
@@ -252,8 +262,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </html>";
     } else {
         // Հաջող գրանցում
-      $sqlInsert = "INSERT INTO user (firstName, lastName)
-      VALUES ('" . $_POST['name'] . "', '" . $_POST['second-name'] . "')";
+      $sqlInsert = "INSERT INTO user (firstName, lastName,Email,Passwords,ConfirmPassword,username,PhoneNumber,DateOfBirth,Gender,AddressOfUser)
+      VALUES ('" . $_POST['name'] . "', '" . $_POST['second-name'] . "')";//values sharunake; tun@
+      
 
         echo "<!DOCTYPE html>
 <html lang='hy'>
